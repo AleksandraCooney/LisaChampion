@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa Champion - Psychotherapist, Counsellor & Clinical Supervisor | Sydney</title>
+    <meta name="description" content="Lisa Champion, PhD - Experienced psychotherapist offering therapy, couples counselling, clinical supervision and professional development workshops for therapists in Sydney.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2d6a5f;
+            --primary-light: #4a8977;
+            --accent: #8b7355;
+            --sage: #9cad93;
+            --cream: #f9f7f4;
+            --teal-light: #e8f4f2;
+            --warm-brown: #a0826d;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #333;
+            background: var(--cream);
+        }
+
+        /* Header & Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    right: -2rem;
+    width: 300px; /* adjust size as needed */
+    height: 300px;
+    background-image: url('Web Logo.png'); /* your logo file */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    transform: rotate(0deg);
+    z-index: 0; /* ensure it sits behind your content */
+}
+
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 6px;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-links a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Dual Path Navigation */
+        .dual-path {
+            max-width: 1200px;
+            margin: -3rem auto 3rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .path-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--primary);
+        }
+
+        .path-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+        }
+
+        .path-card h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border: none;
+            padding: 0;
+        }
+
+        .path-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .path-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--primary-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            border-bottom: 3px solid var(--sage);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--primary-light);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.9rem 2.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 106, 95, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: #6d5a44;
+        }
+
+        .btn-calendar {
+            background: var(--sage);
+            font-size: 0.9rem;
+            padding: 0.7rem 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .btn-calendar:hover {
+            background: var(--primary-light);
+        }
+
+        /* Workshop Grid */
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .workshop-card {
+            background: linear-gradient(135deg, var(--teal-light) 0%, #fff 100%);
+            border: 2px solid var(--sage);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .workshop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(45, 106, 95, 0.15);
+        }
+
+        .workshop-date {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .workshop-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 1rem;
+            min-height: 3rem;
+            font-weight: 500;
+        }
+
+        .workshop-details {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .prerequisite {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            color: #856404;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background: var(--teal-light);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 5px solid var(--primary);
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .info-box ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .info-box li {
+            margin-bottom: 0.75rem;
+        }
+
+        /* Newsletter Signup */
+        .newsletter-box {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .newsletter-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.9rem 1.2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background: white;
+            color: var(--primary);
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--cream);
+            transform: translateY(-2px);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .service-card {
+            background: var(--cream);
+            padding: 2.5rem;
+            border-radius: 10px;
+            border-top: 4px solid var(--sage);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+        }
+
+        /* Research Highlight */
+        .research-highlight {
+            background: linear-gradient(135deg, var(--teal-light) 0%, #fff 100%);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 6px solid var(--primary);
+            margin: 2rem 0;
+        }
+
+        /* Quote Styling */
+        .quote {
+            background: var(--cream);
+            border-left: 5px solid var(--sage);
+            padding: 1.8rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        /* Contact Forms */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-card {
+            background: var(--teal-light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .contact-card p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .contact-info {
+            background: var(--cream);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .practice-image {
+            width: 100%;
+            max-width: 600px;
+            height: 500px;
+            background: linear-gradient(135deg, var(--teal-light) 0%, var(--sage) 100%);
+            border-radius: 10px;
+            margin: 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-style: italic;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Blog/Resources Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .blog-card {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        .blog-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 0.75rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--cream);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--sage);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Book Section */
+        .book-teaser {
+            background: linear-gradient(135deg, var(--warm-brown) 0%, var(--accent) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .book-teaser h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        /* Share Buttons */
+        .share-buttons {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .share-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--sage);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+
+            section {
+                padding: 2rem 1.5rem;
+            }
+
+            .dual-path {
+                margin-top: 2rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                min-width: 100%;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="logo"></div>
+            <h1>Lisa Champion</h1>
+            <p class="subtitle">PhD, Psychotherapist, Counsellor & Clinical Supervisor</p>
+            <p class="tagline">Finding therapeutic wisdom through compassionate, supportive practice</p>
+<br/>
+        </div>
+    </div>
+
+    <!-- Dual Path Cards -->
+    <div class="dual-path">
+        <div class="path-card">
+            <div class="path-icon"></div>
+            <h2>For Clients</h2>
+            <p>Individual therapy, couples counselling, and clinical supervision in a safe, supportive space</p>
+            <a href="#therapy" class="btn">Explore Therapy Services</a>
+        </div>
+
+        <div class="path-card">
+            <div class="path-icon"></div>
+            <h2>For Practitioners</h2>
+            <p>Professional development workshops based on PhD research exploring the therapist's self-appearing</p>
+            <a href="#workshops" class="btn">View 2025 Workshops</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Lisa</a></li>
+            <li><a href="#therapy">Therapy Services</a></li>
+            <li><a href="#supervision">Supervision</a></li>
+            <li><a href="#workshops">Workshops</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="main-content">
+        
+        <!-- About Section -->
+        <section id="about">
+    <h2>About Lisa</h2>
+
+    <div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap;">
+        <!-- Keep Lisa image inside .practice-image -->
+        <div class="practice-image" style="flex: 1 1 300px; max-width: 400px; padding: 0;">
+            <img src="Lisa Image.jpg" alt="Lisa" 
+                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        </div>
+
+        <!-- Text on the right -->
+        <div style="flex: 2 1 500px;">
+            <h3>Professional Journey</h3>
+            <p>I've been passionate about helping people all of my life. I started my career by studying exercise science and worked for many years in the fitness industry. As an exercise therapist, I specialised in helping clients with pain, injury and rehabilitation issues. In this work I became increasingly aware of the emotional toll of pain and injury and decided to study counselling to better help my clients.</p><br/>
+
+            <p>This journey led to where I am today - with 13 years in private practice as a counsellor and psychotherapist who feels passionate about helping people find their way through difficult, uncertain or uncomfortable times. You could say that my journey started working with the body and has led me to working with the mind, although I do feel that the two are absolutely inseparable.</p>
+        </div>
+    </div>
+
+    <h3>Approach & Philosophy</h3>
+    <p>I believe in creating a safe, supportive, and encouraging space where you can explore your experiences without judgment. My approach is grounded in finding therapeutic wisdom - not just through theories or strategies, but through the lived experience of working through challenges together.</p><br/>
+
+    <p>I enjoy working with all types of people and my clients come from many different ages, cultures and backgrounds. I see individuals, couples, and athletes - all at varying stages of life. This diversity is one of the things that makes counselling so rich and rewarding.</p>
+
+    <div class="quote">
+        "The privilege of a lifetime is to become who you truly are." - C.G. Jung
+    </div>
+</section>
+
+        <!-- Therapy Services Section -->
+        <section id="therapy">
+            <h2>Therapy Services</h2>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Almost everyone can benefit from counselling when they are feeling low, stressed, uncomfortable, unsure or in need of support. Counselling is sometimes called 'The Talking Cure' - talking about your concerns with someone who is objective, non-judgmental and supportive can help you feel better and think more clearly.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Individual Therapy</h3>
+                    <p>People come to counselling for many reasons - feeling down, anxious or overwhelmed, unsure about relationships, or navigating a new stage of life. Whatever the issue, exploring your experience with supportive guidance can help you gain clarity, feel more comfortable, become more confident and better understand yourself and others.</p>
+                    
+                    <h4 style="margin-top: 1.5rem; color: var(--primary); font-size: 1.1rem;">What to Expect</h4>
+                    <p style="font-size: 0.95rem;">Sessions provide a safe space for you to explore your thoughts and feelings. We'll work together at a pace that feels right for you, building understanding and developing strategies for moving forward.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Couples Counselling</h3>
+                    <p>Couple counselling is about helping couples develop a deeper, more genuine and loving bond with one another. Couples can get stuck on issues or in patterns of relating that cause discomfort and unease. Through counselling, couples can grow to better understand and communicate with one another, resulting in a more loving, trusting and authentic relationship.</p>
+                    
+                    <h4 style="margin-top: 1.5rem; color: var(--primary); font-size: 1.1rem;">The Process</h4>
+                    <p style="font-size: 0.95rem;">I provide a neutral, supportive environment where both partners can be heard and understood. Together we'll explore patterns, improve communication, and strengthen your connection.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Working with Athletes</h3>
+                    <p>Athletes face huge psychological and physical demands, often managing expectations from themselves and others that can leave them feeling exhausted and overwhelmed. The pressures of life can lead to depression and anxiety. It's normal for athletes to face identity, relationship, confidence and motivation challenges.</p>
+                    
+                    <h4 style="margin-top: 1.5rem; color: var(--primary); font-size: 1.1rem;">Specialized Support</h4>
+                    <p style="font-size: 0.95rem;">I understand the unique pressures athletes face and provide tailored support for managing performance anxiety, transitions, injuries, and life beyond sport.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>Getting Started with Therapy</h3>
+                <p>Wondering if counselling is for you? Send me an email and we can arrange to talk on the phone.</p>
+                <a href="#contact" class="btn" style="margin-top: 1rem;">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- Supervision Section -->
+        <section id="supervision">
+            <h2>Clinical Supervision</h2>
+            
+            <h3>For Therapists & Counsellors</h3>
+            <p>I offer clinical supervision for therapists and counsellors at all stages of their professional journey. My supervision approach is informed by my PhD research on how therapists experience themselves appearing in their work, bringing a phenomenological lens to our explorations together.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>What You'll Gain</h3>
+                    <ul style="text-align: left; margin-left: 1.5rem;">
+                        <li>Professional development and reflective practice</li>
+                        <li>Support in finding your authentic therapeutic voice</li>
+                        <li>Exploration of how you experience yourself in sessions</li>
+                        <li>Working through challenges and disruptions</li>
+                        <li>Growing therapeutic wisdom through experience</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Format & Approach</h3>
+                    <p><strong>Individual Supervision:</strong> One-on-one sessions tailored to your specific needs and practice context.</p>
+                    <p style="margin-top: 1rem;"><strong>Group Supervision:</strong> Collaborative learning with fellow practitioners in a supportive environment.</p>
+                    <p style="margin-top: 1rem;">I hold a phenomenological attitude in supervision, allowing your experiences and disruptions to be present, and exploring them in ways that support your growth.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>Interested in Supervision?</h3>
+                <p>Contact me to discuss your supervision needs, frequency options, and availability. I work with both provisionally registered and experienced practitioners.</p><br/>
+                <a href="mailto:lisachampion@champion.net.au" class="btn">Inquire About Supervision</a>
+            </div>
+        </section>
+
+        <!-- Workshops Section -->
+        <section id="workshops">
+            <h2>2025 Professional Development Workshops</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Join me for intimate, experiential workshops exploring the phenomenon of the psychotherapist's self-appearing in practice. These workshops are designed for psychotherapists and counsellors seeking to deepen their understanding of how they experience themselves in therapeutic work.</p>
+
+            <div class="info-box">
+                <h3>Workshop Details</h3>
+                <ul>
+                    <li><strong>Format:</strong> Interactive Zoom workshops with full participation (cameras on)</li>
+                    <li><strong>Time:</strong> Fridays, 9:30 AM - 4:00 PM AEST</li>
+                    <li><strong>Investment:</strong> $275 per workshop</li>
+                    <li><strong>Participants:</strong> Limited to 12 (maximum 16 if high demand)</li>
+                    <li><strong>Approach:</strong> Experiential exploration through phenomenological inquiry</li>
+                </ul>
+            </div>
+
+            <div class="workshop-grid">
+                <div class="workshop-card">
+                    <div class="workshop-date">March 20, 2025</div>
+                    <div class="workshop-title">The Self-Appearing in Practice</div>
+                    <div class="workshop-details">
+                        Exploring how therapists experience themselves appearing in therapeutic moments. An introduction to phenomenological awareness in practice.
+                    </div>
+                    <button class="btn" onclick="registerWorkshop('March 20', '2025-03-20')">Register Interest</button>
+                    <button class="btn btn-calendar" onclick="addToCalendar('2025-03-20', 'The Self-Appearing in Practice')">📅 Add to Calendar</button>
+                </div>
+
+                <div class="workshop-card">
+                    <div class="workshop-date">June 5, 2025</div>
+                    <div class="workshop-title">Being-in-Disruption</div>
+                    <div class="workshop-details">
+                        Working with challenges that disrupt habitual practice patterns. Understanding vulnerability and resistant attunement.
+                    </div>
+                    <button class="btn" onclick="registerWorkshop('June 5', '2025-06-05')">Register Interest</button>
+                    <button class="btn btn-calendar" onclick="addToCalendar('2025-06-05', 'Being-in-Disruption')">📅 Add to Calendar</button>
+                </div>
+
+                <div class="workshop-card">
+                    <div class="workshop-date">August 28, 2025</div>
+                    <div class="workshop-title">Being-in-Transformation</div>
+                    <div class="workshop-details">
+                        Moving toward receptive attunement and holding vulnerability with openness. Pathways to therapeutic wisdom.
+                    </div>
+                    <button class="btn" onclick="registerWorkshop('August 28', '2025-08-28')">Register Interest</button>
+                    <button class="btn btn-calendar" onclick="addToCalendar('2025-08-28', 'Being-in-Transformation')">📅 Add to Calendar</button>
+                </div>
+
+                <div class="workshop-card">
+                    <div class="workshop-date">November 6, 2025</div>
+                    <div class="workshop-title">Application to Supervision</div>
+                    <div class="workshop-details">
+                        Bringing phenomenological awareness of the self-appearing into supervision practice. For supervisors and aspiring supervisors.
+                    </div>
+                    <div class="prerequisite">
+                        <strong>Pre-requisite:</strong> Attendance at one previous 2025 workshop
+                    </div>
+                    <button class="btn" onclick="registerWorkshop('November 6', '2025-11-06')">Register Interest</button>
+                    <button class="btn btn-calendar" onclick="addToCalendar('2025-11-06', 'Application to Supervision')">📅 Add to Calendar</button>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>What to Expect</h3>
+                <p>These workshops are experiential and participatory, drawing on phenomenological approaches to explore your lived experience as a therapist. Through guided inquiry, reflection, and group dialogue, you'll develop deeper insight into:</p>
+                <ul>
+                    <li>How you experience yourself appearing in therapeutic moments</li>
+                    <li>The role of disruption in professional growth</li>
+                    <li>Moving from resistant to receptive attunement</li>
+                    <li>Holding vulnerability with openness in practice</li>
+                    <li>Developing therapeutic wisdom through lived experience</li>
+                </ul>
+                <p style="margin-top: 1rem;"><em>These are not webinars - full participation with camera on is essential for the experiential nature of this work.</em></p>
+            </div>
+
+
+<h3 style="margin-top: 3rem;">Frequently Asked Questions</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do I need to be a registered therapist to attend the workshops?</div>
+                <div class="faq-answer">The workshops are designed for practicing psychotherapists and counsellors who are interested in deepening their understanding of how they experience themselves in therapeutic work. Both provisionally registered and fully registered practitioners are welcome.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I attend just one workshop or do I need to attend all four?</div>
+                <div class="faq-answer">You're welcome to attend individual workshops based on your interests. However, the November workshop "Application to Supervision" requires attendance at one previous 2025 workshop. Many participants find value in attending multiple workshops as they build on each other.</div>
+            </div>
+
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter-box">
+                <h3>Stay Updated on Workshops & Professional Development</h3>
+                <p>Join the mailing list to receive updates about upcoming workshops, research insights, and professional development opportunities.</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Enter your email" required id="newsletter-email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://champion.net.au" target="_blank" class="share-btn">
+                    🔗 Share on LinkedIn
+                </a>
+                <a href="mailto:?subject=Lisa Champion Workshops&body=Check out these professional development workshops: https://champion.net.au" class="share-btn">
+                    ✉️ Share via Email
+                </a>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research">
+            <h2>Research & Expertise</h2>
+            
+            <div class="research-highlight">
+                <h3>PhD: The Phenomenon of the Psychotherapist's Self-Appearing</h3>
+                <p><em>A Heideggerian Perspective</em></p>
+                
+                <p style="margin-top: 1.5rem;">My doctoral research explores how experienced humanistically-informed psychotherapists experience their self-appearing during therapeutic practice, using Heideggerian hermeneutic phenomenology. By contrasting the phenomenon of the self-appearing with the dominant paradigm of self-awareness in psychotherapy, the study illuminates previously unexplored dimensions of therapists' lived experiences.</p>
+
+                <h3 style="font-size: 1.3rem; margin-top: 2rem;">Key Research Findings</h3>
+                <p>Through interviews with 12 experienced psychotherapists and a phenomenological discussion group with clinical supervisors, the research elucidates three key dimensions of the self-appearing process:</p>
+
+                <ul style="margin: 1rem 0 1rem 2rem;">
+                    <li><strong>Being-in-Convention:</strong> Therapists' average everyday way of being, where pre-reflective conventions shape their practice</li>
+                    <li><strong>Being-in-Disruption:</strong> Experiencing challenges that disrupt habitual practices, initially leading to vulnerability and resistant attunement</li>
+                    <li><strong>Being-in-Transformation:</strong> Moving toward receptive attunement, holding vulnerability with openness, enabling deeper understanding and growth</li>
+                </ul>
+
+                <h3 style="font-size: 1.3rem; margin-top: 2rem;">Implications for Supervision</h3>
+                <p>The research revealed four key themes for supervision practice:</p>
+                <ul style="margin: 1rem 0 1rem 2rem;">
+                    <li>Holding a phenomenological attitude in supervision</li>
+                    <li>Allowing supervisees' disruptions to be present</li>
+                    <li>Exploring disruptions experientially</li>
+                    <li>Modelling working with disruption within the supervision space</li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;"><strong>Unique Contribution:</strong> This research shifts focus from therapists' "use of self" to understanding <em>how</em> therapists experience themselves appearing through a Heideggerian perspective. It demonstrates a pathway for growth in therapeutic wisdom that occurs not through theories or cognitive strategies but through the lived experience of working through disruption.</p>
+            </div>
+
+            <div class="quote">
+                "There can be no knowledge without emotion. We may be aware of a truth, yet until we have felt its force, it is not ours. To the cognition of the brain must be added the experience of the soul." - Arnold Bennett
+            </div>
+
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/in/lisa-champion-820b7aa7" target="_blank" class="share-btn">
+                    🔗 Connect on LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources">
+            <h2>Resources & Insights</h2>
+            
+            <h3>Research Insights</h3>
+            <p>Explore brief articles based on my PhD research on the phenomenon of the psychotherapist's self-appearing in practice.</p>
+
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <h4>Understanding Being-in-Disruption</h4>
+                    <p class="blog-date">Coming Soon</p>
+                    <p>How therapists experience challenges that disrupt habitual practices and the pathway to growth through vulnerability.</p>
+                </div>
+
+                <div class="blog-card">
+                    <h4>The Phenomenological Attitude in Supervision</h4>
+                    <p class="blog-date">Coming Soon</p>
+                    <p>Exploring how supervisors can hold space for supervisees' disruptions and facilitate experiential learning.</p>
+                </div>
+
+                <div class="blog-card">
+                    <h4>From Resistant to Receptive Attunement</h4>
+                    <p class="blog-date">Coming Soon</p>
+                    <p>The transformative journey therapists undertake when moving through disruption toward therapeutic wisdom.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 3rem;">Frequently Asked Questions</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question">What happens in the first counselling session?</div>
+                <div class="faq-answer">When you first come to counselling, you may feel a bit nervous or unsure. This is perfectly normal. The first session is all about getting to know each other. After a few practicalities (like filling in some paperwork and talking about fees and cancellation policies), I’ll ask you to tell me a little bit about yourself and what brings you to counselling. We will talk through your concerns and goals and I will let you know if I feel that I can be of help. You are also free to ask any questions you might have. One of the most important predictors of a successful outcome from counselling is a good relationship between the client and counsellor. So I encourage you to trust yourself about this. Do you feel comfortable with me? Did you feel that I understood your concerns? If so, chances are that the work we do will be meaningful and helpful.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What about subsequent sessions?</div>
+                <div class="faq-answer">In between counselling sessions it’s important to be curious and thoughtful about the things you are learning about yourself. It’s helpful to come to each session with something that you have been curious about or would like to work on. This gives direction to our work together and help to keep it centred around your goals.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How long does a counselling session last?</div>
+                <div class="faq-answer">Counselling sessions last for one hour.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How often should I come?</div>
+                <div class="faq-answer">There is no one answer to this. Often at the start of a counselling journey, it’s helpful to come weekly. This is especially important if the matter that brings you to counselling is pressing and you are feeling very distressed or overwhelmed. Many clients find weekly sessions the most helpful. Some clients choose to come fortnightly and that can also be fine. Sometimes clients come weekly at first and then switch to fortnightly when they are feeling more settled. All options are open and we will just keep talking about what is right for you.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How many sessions will I need?</div>
+                <div class="faq-answer">Some people come to counselling with a very specific issue and feel better after only a few sessions. Others need more time, especially if they are noticing that similar issues arise over and over again in different contexts and relationships. This may be related to experiences from the past that take longer to work through. This is the difference between counselling (shorter term) and what is known as therapy (also called psychotherapy). If you’d like to read more about the difference,  
+<a href="http://www.pacfa.org.au/practitioner-resources/counselling-psychotherapy-definitions" target="_blank" class="share-btn">
+                    click here:
+                </a>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">I am concerned about my relationship, but my partner is reluctant to come to counselling. What do you recommend?</div>
+                <div class="faq-answer">For relationship issues it is preferable for a couple come to counselling together. It’s not uncommon, however, for one partner to be reluctant. If that is the case, it can still be helpful to come on your own.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need a GP referral?</div>
+                <div class="faq-answer">No, you do not need a GP referral.</div>
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-question">What are the fees?</div>
+                <div class="faq-answer">I offer a reasonable fee structure that is based on a sliding scale dependent on income. For more information, please be in touch via email.</div>
+            </div>
+
+
+
+        </section>
+
+        <!-- Future Book Section -->
+        <section id="book">
+            <h2>Forthcoming Book</h2>
+            
+            <div class="book-teaser">
+                <h3>The Psychotherapist's Self-Appearing: A Heideggerian Exploration</h3>
+                <p style="margin-top: 1rem; font-size: 1.1rem;">Currently in development - a comprehensive exploration of how therapists experience themselves appearing in practice, based on groundbreaking PhD research.</p>
+                
+                <p style="margin-top: 1.5rem; font-size: 0.95rem;">This book will offer insights for therapists, supervisors, and trainers interested in understanding the lived experience of therapeutic practice through a phenomenological lens.</p>
+                
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.9;"><em>Sign up for the newsletter to be notified when the book becomes available for pre-order.</em></p>
+            </div>
+
+            <div class="info-box">
+                <h3>Stay Informed</h3>
+                <p>Join the mailing list to receive updates about the book release, chapter previews, and related resources.</p>
+                <a href="#workshops" class="btn" style="margin-top: 1rem;">Subscribe to Updates</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact & Location</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Client Inquiries</h3>
+                    <p>For therapy or couples counselling appointments</p>
+                    <a href="mailto:lisachampion@champion.net.au" class="btn">Email Lisa</a>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Workshop Registration</h3>
+                    <p>Questions about 2025 professional development workshops</p>
+                    <a href="mailto:workshops@champion.net.au" class="btn">Workshop Inquiries</a>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Supervision Inquiries</h3>
+                    <p>For clinical supervision arrangements</p>
+                    <a href="mailto:lisachampion@champion.net.au" class="btn">Discuss Supervision</a>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Practice Location</h3>
+                <p><strong>The Cooperage</strong><br>
+                Jacksons Landing, Pyrmont, Sydney</p>
+
+                <div class="practice-image">
+                    <div>
+<img src="Location Image.jpg" alt="Heritage Waterfront Location" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                        <p style="font-size: 1.2rem; margin-bottom: 1rem;">A Heritage Waterfront Location</p>
+                        <p>A lovely heritage building located on the waterfront in the Jacksons Landing area of Pyrmont, providing a peaceful and reflective space for therapeutic work.</p>
+                    </div>
+                </div>
+
+                <h4 style="color: var(--primary); margin-top: 2rem;">Getting Here</h4>
+                <p><strong>Parking:</strong> Ample street parking with 2-hour metres available. There is also a small car park directly behind the building on Refinery Drive.</p>
+
+                <p style="margin-top: 1rem;"><strong>Access:</strong> At your appointment time, enter 306 and the bell sign on the keypad at the right of the front door. I'll buzz you up. The front door will open and you can take the lift to the third floor. Turn left as you exit the lift and you'll see my sign.</p>
+
+                <p style="margin-top: 1rem;"><strong>Public Transport:</strong> Easily accessible from the city. The location is within walking distance of several bus routes and a short distance from light rail connections.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lisa Champion, PhD</p>
+        <p style="margin-top: 0.5rem;">Psychotherapist, Counsellor & Clinical Supervisor</p>
+        <p style="margin-top: 1rem;">
+            <a href="mailto:lisachampion@champion.net.au">lisachampion@champion.net.au</a> | 
+            <a href="https://www.linkedin.com/in/lisa-champion-820b7aa7" target="_blank">LinkedIn</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            The Cooperage, Jacksons Landing, Pyrmont, Sydney
+        </p>
+    </footer>
+
+    <script>
+        function registerWorkshop(workshopDate, isoDate) {
+            const subject = encodeURIComponent(`Workshop Interest - ${workshopDate} 2025`);
+            const body = encodeURIComponent(`Hi Lisa,\n\nI'm interested in registering for the workshop on ${workshopDate}, 2025.\n\nName:\nPhone:\nEmail:\nProfessional background:\n\nPlease send me further details about registration.\n\nThank you!`);
+            window.location.href = `mailto:workshops@champion.net.au?subject=${subject}&body=${body}`;
+        }
+
+        function addToCalendar(date, title) {
+            const startDate = date.replace(/-/g, '');
+            const startTime = '093000'; // 9:30 AM
+            const endTime = '160000'; // 4:00 PM
+            
+            const description = encodeURIComponent('Professional development workshop with Lisa Champion, PhD. Interactive Zoom workshop (cameras on). Details: https://champion.net.au');
+            const location = encodeURIComponent('Zoom (link provided upon registration)');
+            const eventTitle = encodeURIComponent(title + ' - Lisa Champion Workshop');
+            
+            // Google Calendar URL
+            const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&dates=${startDate}T${startTime}/${startDate}T${endTime}&details=${description}&location=${location}&ctz=Australia/Sydney`;
+            
+            // Open in new window
+            window.open(googleUrl, '_blank');
+        }
+
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            const subject = encodeURIComponent('Newsletter Subscription');
+            const body = encodeURIComponent(`Please add me to the mailing list for workshop updates and professional development opportunities.\n\nEmail: ${email}`);
+            window.location.href = `mailto:workshops@champion.net.au?subject=${subject}&body=${body}`;
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
